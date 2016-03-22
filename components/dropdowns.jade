@@ -1,7 +1,7 @@
 //- Dropdown
 mixin dropdown(caption,items)
 	.dropdown
-		button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown")
+		button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown")&attributes(attributes)
 			= caption
 			| &nbsp;
 			span.caret
@@ -14,7 +14,7 @@ mixin dropdown(caption,items)
 //- Dropup
 mixin dropup(caption,items)
 	.dropup
-		button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown")
+		button.btn.btn-default.dropdown-toggle(type="button",data-toggle="dropdown")&attributes(attributes)
 			= caption
 			| &nbsp;
 			span.caret

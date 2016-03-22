@@ -1,11 +1,11 @@
 //- list-group mixins
 mixin list-group(items)
-	ul.list-group
+	ul.list-group&attributes(attributes)
 	each item, index in items
 		li.list-group-item #{item}
 
 mixin list-group-links(items,active)
-	.list-group
+	.list-group&attributes(attributes)
 	each item, index in items
 		if(index === active)
 			a.list-group-item.active(href="#{item.url}") #{item.text}
@@ -14,12 +14,12 @@ mixin list-group-links(items,active)
 
 mixin list-group-item(url,active)
 	if(active === "true")
-		a.list-group-item.active(href="#{url}")
+		a.list-group-item.active(href="#{url}")&attributes(attributes)
 			block
 	else
-		a.list-group-item(href="#{url}")
+		a.list-group-item(href="#{url}")&attributes(attributes)
 			block
 
 mixin list-group-custom()
-	.list-group
+	.list-group&attributes(attributes)
 		block

@@ -1,6 +1,6 @@
 //- toggle
 mixin toggle(type,text)
-	button.btn(class="btn-#{type}",type="button",data-toggle="button",aria-pressed="false",autocomplete="off")
+	button.btn(class="btn-#{type}",type="button",data-toggle="button",aria-pressed="false",autocomplete="off")&attributes(attributes)
 		= text
 
 //- toggle-primary
@@ -33,7 +33,7 @@ mixin toggle-danger(text)
 
 //- checkbox toggle group
 mixin checkbox-toggle(type,items,active)
-	.btn-group(data-toggle="buttons")
+	.btn-group(data-toggle="buttons")&attributes(attributes)
 		each item,index in items
 			if(index === active)
 				label.btn.active(class="btn-#{type}")

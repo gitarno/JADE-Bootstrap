@@ -1,6 +1,6 @@
 //- Nav mixins
 mixin nav(type,items,active)
-	ul.nav(class="#{type}")
+	ul.nav(class="#{type}")&attributes(attributes)
 		each item,index in items
 			if(index === active)
 				li.active(role="presentation")

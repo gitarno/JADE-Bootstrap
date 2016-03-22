@@ -1,6 +1,6 @@
 //- Tabs
 mixin tab-list(tabs,active)
-	ul.nav.nav-tabs(role="tablist")
+	ul.nav.nav-tabs(role="tablist")&attributes(attributes)
 		each item,index in tabs
 			if (index === active)
 				li.active
@@ -15,8 +15,8 @@ mixin tab-list(tabs,active)
 //- Tab pane
 mixin tab(id,active)
 	if(active)
-		.tab-pane.active(id="tab#{id}")
+		.tab-pane.active(id="tab#{id}")&attributes(attributes)
 			block
 	else
-		.tab-pane(id="tab#{id}")
+		.tab-pane(id="tab#{id}")&attributes(attributes)
 			block

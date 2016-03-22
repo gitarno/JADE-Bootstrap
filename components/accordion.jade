@@ -1,12 +1,12 @@
 //- accordion
 mixin accordion(id)
-	.panel-group(id="accordion#{id}", role="tablist", aria-multiselectable="true")
+	.panel-group(id="accordion#{id}", role="tablist", aria-multiselectable="true")&attributes(attributes)
 		block
 
 //- accordion-item
 mixin accordion-item(type,title,parent,expanded)
 	-var id = title.replace(/\s+/g,"")
-	.panel(class="panel-#{type}")
+	.panel(class="panel-#{type}")&attributes(attributes)
 		.panel-heading(role="tab", id="heading#{title}")
 			h4.panel-title
 				a(data-toggle="collapse", data-parent="#accordion#{parent}", href="#collapse#{id}", aria-expanded="true" ,aria-controls="collapseOne")
