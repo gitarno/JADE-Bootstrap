@@ -7,8 +7,11 @@ var html = jade.renderFile(__dirname + '/alert.jade');
 console.log("HTML render:");
 console.log(html);
 
-describe('attribute:',function(){
+assert.contains = function(expect){
+	assert( html.indexOf(expect) > -1);
+}
 
+describe('attribute:',function(){
   // Alerts
   it('Adding attribute: alert-info' ,function() {
     assert.contains('alert-info" data-attribute="test">test single');
